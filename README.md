@@ -3,7 +3,9 @@ Download http resource and measure speed with different .NET appoaches.
 All links in [url.txt](url.txt) file.  
 For each approach try to download with arbitrary degree of parallelism.  
 After download each resource is saved in it folder to check correctness.  
-For example, `Task.Run` appoach with 10 tasks for `yandex.ru` url will be saved in `Task.Run\10\yandex.ru.html' file.  
+For example, `Task.Run` appoach with 10 tasks for `yandex.ru` url  
+will be saved in `Task.Run\10\yandex.html` file.  
+Suffix will be added for same resources, bad requests will have empty files.  
 Finally, result of measuaments will be plotted.
 
 ## HttpTask class
