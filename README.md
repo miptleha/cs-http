@@ -11,5 +11,5 @@ Finally, result of measuaments will be plotted.
 Have `synchronous` operation for download using `HttpRequest` .NET class.  
 Have `asynchronous` analog for download using `HttpClient` .NET class.  
 Both operation saves result in file, perform time measure and update download statistic.
-[~task.png](task.png)
+![task.png](task.png)
 Operation have small cpu calculation at begining and ending and a lot of wait period for i/o task.
