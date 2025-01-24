@@ -9,4 +9,11 @@
     <NoWarn>SYSLIB0014</NoWarn>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="url.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+</ItemGroup>
+
+
 </Project>

@@ -1,22 +1,14 @@
-
 using System.Net;
 using System.Text;
-using Microsoft.VisualBasic;
 
+/// <summary>
+/// Perform GET HTTP Request in synchronous or asynchronous manner
+/// Returns content as string (or Task<string>)
+/// </summary>
 class HttpTask
 {
     static HttpTask() 
     {
-        //content of url.txt
-        Url =  new List<string>();
-        using var reader = new StreamReader("url.txt", Encoding.UTF8);
-        string? line;
-        while ((line = reader.ReadLine()) != null)
-        {
-            if (!string.IsNullOrWhiteSpace(line) && !line.StartsWith('#'))
-                Url.Add(line);
-        }
-        
         //global HttpClient
         var handler = new HttpClientHandler();
         if (handler.SupportsAutomaticDecompression)
@@ -27,17 +19,19 @@ class HttpTask
         _rand = new Random();
     }
 
+    private HttpTask()
+    {}
 
     static HttpClient _httpClient;
     static Random _rand;
-    public static List<string> Url { get; private set; }
 
-    public string? Download(string url)
+    public static string? Download(string url)
     {
         string? result = null;
         try
         {
-            var request = HttpWebRequest.CreateHttp(url + AddRandom());
+            var builder = new UriBuilder(AddRandom(url));
+            var request = HttpWebRequest.CreateHttp(builder.Uri);
             request.AutomaticDecompression = DecompressionMethods.All;
             using var response = request.GetResponse();
             using var reader = new StreamReader(response.GetResponseStream(), Encoding.UTF8);
@@ -47,32 +41,30 @@ class HttpTask
         {
             //error
         }
-        SaveFileAndStatistic(result);
         return result;
     }
 
-    public async Task<string?> DownloadAsync(string url)
+    public static async Task<string?> DownloadAsync(string url)
     {
         string? result = null;
         try
         {
-            result = await _httpClient.GetStringAsync(url + AddRandom());
+            var builder = new UriBuilder(AddRandom(url));
+            result = await _httpClient.GetStringAsync(builder.Uri);
         }
         catch
         {
             //error
+            //Console.WriteLine(ex.ToString());
         }
-        SaveFileAndStatistic(result);
         return result;
     }
 
-    private void SaveFileAndStatistic(string? result)
+    //disable caching
+    private static string AddRandom(string url)
     {
-        //TODO: save to file, output some to console, update statistic
-    }
-
-    private string AddRandom()
-    {
-        return "?rand=" + _rand.Next();
+        string rnd = "rand=" + _rand.Next();
+        string sep = url.IndexOf('?') != -1 ? "&" : "?";
+        return $"{url}{sep}{rnd}";
     }
 }
