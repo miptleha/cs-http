@@ -46,13 +46,18 @@ public class SimpleVersion
         }
 
         Console.WriteLine($"Ok count: {cntOk}, Fail count: {cntFail}");
-        Console.WriteLine($"Synchronous total size: {Math.Round(syncSize / 1024f)} KB, total time: {ToStr(tsSync)}");
-        Console.WriteLine($"Asynchronous total size: {Math.Round(asyncSize / 1024f)} KB, total time: {ToStr(tsAsync)}");
+        Console.WriteLine($"Synchronous total size: {KB(syncSize)} KB, total time: {ToStr(tsSync)}");
+        Console.WriteLine($"Asynchronous total size: {KB(asyncSize)} KB, total time: {ToStr(tsAsync)}");
     }
 
-    static string ToStr(TimeSpan ts)
+    public static string ToStr(TimeSpan ts)
     {
         return ts.ToString("mm\\:ss\\.fff");
+    }
+
+    public static long KB(long bytes)
+    {
+        return (int)Math.Round(bytes / 1024f);
     }
 
     static string? Nvl(object? val)
