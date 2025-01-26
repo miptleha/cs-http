@@ -49,7 +49,7 @@ public class MainVersion
     record RunnerInfo(string Description, Func<int, int, List<string?>> Operation);
     readonly static List<RunnerInfo> _runnerInfo = [
         new RunnerInfo(
-            "Task.Run synchronous task",
+            "Task.Run synchronous",
             (i, ms) => Executer<string, string?>.Execute_TaskRun(UrlLoader.Url, i, s => 
             { 
                 Thread.Sleep(ms);
@@ -57,7 +57,7 @@ public class MainVersion
             })
         ),
         new RunnerInfo(
-            "Task.Run asynchronous task",
+            "Task.Run asynchronous",
             (i, ms) => Executer<string, string?>.Execute_TaskRunAsync(UrlLoader.Url, i, s =>
             {
                 Thread.Sleep(ms);

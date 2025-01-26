@@ -19,6 +19,7 @@ Try this application:
 ```
 dotnet run
 ```
+[MainVersion.cs](MainVersion.cs) a cycle is launched by methods and degree of parallelism.   
 Outputs to console common information about measurement process.  
 Creates two `.csv` file with results for different parallel approaches and degree.  
 The first file only has downloads, the second has a pause before each download to simulate some work.  
