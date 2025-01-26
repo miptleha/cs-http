@@ -15,7 +15,7 @@ Operation have small cpu calculation at starting and ending and a lot of wait pe
 
 
 ## Results of running
-Start this [application](Program.cs):  
+Start [Program.cs](Program.cs) console application:  
 ```
 dotnet run
 ```
