@@ -3,12 +3,9 @@
 # Need more url
 
 google.com
-https://jsonplaceholder.typicode.com/pos2ts
 https://jsonplaceholder.typicode.com/posts/1
 https://jsonplaceholder.typicode.com/posts/2
-https://jsonplaceholder.typicode.com/posts/3d
 https://jsonplaceholder.typicode.com/posts/1/comments
-https://jsonplaceholder.typicode.com/posts/1/commentds
 https://jsonplaceholder.typicode.com/albums/1/photos
 https://jsonplaceholder.typicode.com/users/1/albums
 https://jsonplaceholder.typicode.com/users/1/todos
@@ -22,44 +19,33 @@ https://www.microsoft.com/
 https://en.wikipedia.org/wiki/World
 
 https://restcountries.com/v3.1/all
-https://restcountries.com/v3.1/name/deutschland
-https://restcountries.com/v3.1/alpha/170
 https://pokeapi.co/api/v2/pokemon/ditto
 
 https://github.com/miptleha/
 https://doka.guide/
 https://yandex.ru/yaintern/
-https://yandex.ru/yaintern/schools/open-lectures
-https://yandex.ru/yaintern/schools/useful
-https://github.com/Yandex-Practicum/algorithms-templates/tree/main/csharp
-https://github.com/Yandex-Practicum/algorithms-theory-examples/tree/master
 https://stackoverflow.com/questions/35653986/i-want-an-efficient-sorting-algorithm-to-sort-an-array
 https://github.com/miptleha/cs-sort/
 https://ru.hexlet.io/
 https://www.c-sharpcorner.com/article/preparing-net-interview-sorted-collections-part-nine/
 https://gitverse.ru/blog
-https://github.com/PracticumGrade/character_creation_module
 https://practicum.yandex.ru/blog/programming/
 https://code.visualstudio.com/docs/python/tutorial-flask
 https://docs.python.org/3/library/venv.html
-https://github.com/PracticumGrade/python-flask-2-precode
 https://habr.com/ru/companies/lamoda/articles/432656/
 https://tproger.ru/translations/demystifying-decorators-in-python
 https://code-basics.com/ru
 https://www.typescriptlang.org/docs/handbook/utility-types.html
 https://makeomatic.ru/blog/2016/08/22/Streams_handbook/
 https://developerhowto.com/2018/12/29/build-a-rest-api-with-node-js-and-express-js/
-https://ru.wikipedia.org/wiki/C_Sharp
 https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
 https://snappywebdesign.net/blog/how-to-set-an-active-list-item-link-material-ui/
 https://reactdev.ru/libs/cra/
-https://redux-toolkit.js.org/
 https://redux-toolkit.js.org/tutorials/overview
 http://docs2.lfe.io/v3/search/
 https://github.com/search/advanced
-https://stackoverflow.com/questions/56468161/netlify-does-not-recognize-the-url-params-when-using-react-router-dom
-https://habr.com/ru/articles/467049/
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background
 https://react-bootstrap.netlify.app/docs/layout/grid/
 https://getbootstrap.com/docs/5.3/getting-started/introduction/
 https://redux.js.org/tutorials/essentials/part-2-app-structure
+https://www.thomasclaudiushuber.com/blog/
