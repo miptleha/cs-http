@@ -1,6 +1,6 @@
 /// <summary>
 /// Different strategy for parallel execution synchronous and asynchronous methods
-/// n parameter allow find optimal degree of parallelism
+/// Each method allows you to specify the degree of parallelism
 /// </summary>
 /// <typeparam name="TParam">parameter type of operation</typeparam>
 /// <typeparam name="TResult">output type of operation</typeparam>
@@ -23,7 +23,7 @@ public class Executer<TParam, TResult>
     }
 
     /// <summary>
-    /// Wait completion of n operation, then repeat for rest
+    /// Wait completion of n operation, repeat for rest of them
     /// </summary>
     public static List<TResult> Execute_BlockAsync(List<TParam> data, int n, Func<TParam, Task<TResult>> operation)
     {
@@ -64,7 +64,7 @@ public class Executer<TParam, TResult>
     }
 
     /// <summary>
-    /// Helper function for block of n-execution
+    /// Helper function for simultaneous asynchronous task execution
     /// </summary>
     private static List<TResult> ExecuteHelper(List<TParam> data, int n, Func<int, Task<TResult>> operation)
     {
