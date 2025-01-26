@@ -19,10 +19,9 @@ Try this application:
 ```
 dotnet run
 ```
-[MainVersion.cs](MainVersion.cs) a cycle is launched by methods and degree of parallelism.   
+[MainVersion.cs](MainVersion.cs) runs the loop by methods and degree of parallelism.   
 Outputs to console common information about measurement process.  
-Creates two `.csv` file with results for different parallel approaches and degree.  
-The first file only has downloads, the second has a pause before each download to simulate some work.  
+Creates two `.csv` file with results: 1) only downloads, 2) added pause before each download to simulate some work.  
 
 ![res1.png](res1.png)  
 ![res2.png](res2.png)
