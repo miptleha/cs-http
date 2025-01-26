@@ -15,20 +15,19 @@ Operation have small cpu calculation at starting and ending and a lot of wait pe
 
 
 ## Results of running
-
 Try this application:  
 ```
 dotnet run
 ```
 Outputs to console common information about measurement process.  
 Creates two `.csv` file with results for different parallel approaches and degree.  
-First file with only downloads, second one - with pause before each download to simulate some work.  
-Here is graphical view of this files:
+The first file only has downloads, the second has a pause before each download to simulate some work.  
+
 ![res1.png](res1.png)  
 ![res2.png](res2.png)
 By increasing the degree of parallelism of loading, the total processing time of all requests decreases.  
 The dependence is not linear, too many simultaneous requests do not bring any benefits.  
-The parallelization algorithm using PLINK showed the best results.
+The parallelization algorithm using PLINQ showed the best results.
 Multiple asynchronous tasks is slower than other methods when there is a blocking wait.
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmiptleha%2Fcs-http&count_bg=%230C7DBD&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
