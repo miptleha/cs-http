@@ -30,4 +30,4 @@ The dependence is not linear, too many simultaneous requests do not bring any be
 The parallelization algorithm using PLINQ showed the best results.
 Multiple asynchronous tasks is slower than other methods when there is a blocking wait.
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmiptleha%2Fcs-http&count_bg=%230C7DBD&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![hits](https://myhits.vercel.app/api/hit/https%3A%2F%2Fgithub.com%2Fmiptleha%2Fcs-http?color=blue&label=hits&size=small)](https://myhits.vercel.app)
